@@ -3,7 +3,7 @@
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { useState } from "react";
 
-const Page = () => {
+const UseEffectVidePlayer = () => {
   const [playing, setPlaying] = useState(false);
 
   return (
@@ -30,4 +30,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default UseEffectVidePlayer;
