@@ -1,14 +1,12 @@
 "use client";
 
-import Header from "@/components/Header";
-import { CountProvider } from "./contexts/CountContext";
+import Header3 from "@/components/Header3";
 
 const Page = () => {
   return (
     <div className="container mx-auto flex justify-center">
-      <CountProvider>
-        <Header />
-      </CountProvider>
+        <Header3/>
+     
     </div>
   );
 };
