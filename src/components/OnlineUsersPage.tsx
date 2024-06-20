@@ -1,9 +1,9 @@
 "use client";
 
 import Header from "@/components/Header";
-import { CountProvider } from "./contexts/CountContext";
+import { CountProvider } from "../app/contexts/CountContext";
 
-const Page = () => {
+const OnlineUsersPage = () => {
   return (
     <div className="container mx-auto flex justify-center">
       <CountProvider>
@@ -13,4 +13,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default OnlineUsersPage;
