@@ -1,19 +1,21 @@
-import { PostContext } from "@/app/contexts/PostContext";
-import { useContext, useState } from "react";
+import { usePosts } from "@/app/contexts/PostContext";
+import { useState } from "react";
 
 const Header3 = () => {
-  const postCtx = useContext(PostContext);
+  const postCtx = usePosts();
 
   const [titleInput, setTitleInput] = useState("");
   const [bodyinput, setBodyInput] = useState("");
 
   const handleAddButton = () => {
-    if(titleInput && bodyinput)
-      {
-        postCtx?.dispatch({ type: "add", payload: { title: titleInput, body: bodyinput } });
-        setBodyInput('');
-        setTitleInput('');
-      }
+    if (titleInput && bodyinput) {
+      postCtx?.dispatch({
+        type: "add",
+        payload: { title: titleInput, body: bodyinput },
+      });
+      setBodyInput("");
+      setTitleInput("");
+    }
   };
 
   return (
@@ -35,7 +37,10 @@ const Header3 = () => {
           onChange={(e) => setBodyInput(e.target.value)}
           value={bodyinput}
         ></textarea>
-        <button onClick={handleAddButton} className="bg-blue-500 p-3 text-white rounded-md">
+        <button
+          onClick={handleAddButton}
+          className="bg-blue-500 p-3 text-white rounded-md"
+        >
           Adicionar
         </button>
       </div>

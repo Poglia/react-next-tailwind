@@ -1,16 +1,11 @@
 "use client";
 
-import { PostContext } from "@/app/contexts/PostContext";
-import { useContext } from "react";
+import { usePosts } from "@/app/contexts/PostContext";
 
 const Footer3 = () => {
-    const postCtx = useContext(PostContext);
+  const postCtx = usePosts();
 
-    return (
-        <footer>
-            Total de posts: {postCtx?.posts.length}
-        </footer>
-    )
+  return <footer>Total de posts: {postCtx?.posts.length}</footer>;
 };
 
 export default Footer3;
