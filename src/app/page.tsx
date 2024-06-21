@@ -1,19 +1,25 @@
 "use client";
 
-import Footer3 from "@/components/Footer3";
-import Header3 from "@/components/Header3";
-import { PostProvider } from "./contexts/PostContext";
-import { PostList } from "@/components/PostList";
+import { ButtonTheme } from "@/components/ButtonTheme";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { Container } from "@/components/Container";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 
 const Page = () => {
   return (
-    <PostProvider>
-      <div className="container mx-auto">
-        <Header3 />
-        <PostList />
-        <Footer3 />
-      </div>
-    </PostProvider>
+    <ThemeProvider>
+      <Container>
+        <header className="py-5">
+          <h1 className="text-3xl">Titulo da Pagina</h1>
+        </header>
+        <section>
+          <p className="my-5">Conteudo da Página</p>
+          <ButtonTheme label="Clique aqui" onClick={() => {}}/>
+        </section>
+        <ThemeSwitch/>
+      </Container>
+    </ThemeProvider>
+  
   );
 };
 
